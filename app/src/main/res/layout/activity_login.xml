@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/ed_bg"
+        android:adjustViewBounds="true"
+
+        android:layout_height="@dimen/_350sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_120sdp"
+
+            android:id="@+id/iv"
+            android:src="@drawable/edt_circle_logo"
+
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/_120sdp">
+
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iv"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Fill the below Information to login"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+
+        android:background="@color/white"
+
+
+
+        android:layout_marginTop="@dimen/_170sdp"
+
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="4dp"
+        app:cardMaxElevation="@dimen/_10sdp"
+
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_height="@dimen/_300sdp">
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginEnd="@dimen/_5sdp"
+
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Login Account"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_20sdp"
+android:id="@+id/tvlogin"
+            android:layout_height="wrap_content">
+
+        </TextView>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_below="@+id/tvlogin"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:hint="Enter Your UserName"
+        android:textColorHint="@color/colorgray01"
+        android:background="@drawable/input_field_decoration"
+
+        android:padding="@dimen/_5sdp"
+        android:drawablePadding="10dp"
+        android:id="@+id/userName"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:hint="Enter Your Password"
+        android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+        android:textColorHint="@color/colorgray01"
+        android:background="@drawable/input_field_decoration"
+        android:layout_below="@+id/userName"
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/password"
+        android:drawablePadding="10dp"
+        android:layout_height="wrap_content">
+
+    </EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="In case you Forget Password?"
+        android:textColor="@color/colorprimary"
+      android:layout_marginTop="@dimen/_10sdp"
+        android:textStyle="bold"
+
+        android:textSize="@dimen/_10sdp"
+
+        android:id="@+id/forgetPassword"
+        android:layout_below="@+id/password"
+
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_below="@+id/forgetPassword"
+        android:background="@drawable/bg_button"
+android:id="@+id/btnLogin"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:text="Login "
+            android:layout_height="wrap_content"
+></TextView>
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
