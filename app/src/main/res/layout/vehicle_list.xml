@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.fleet.pk.DataModel" />
+
+        <variable
+            name="itemClickListener"
+            type="com.fleet.pk.PayActivity.CustomClickListener" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_15sdp"
+        android:onClick="@{() -> itemClickListener.cardClicked(model)}"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text="Car Name: "
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text='@{model.carName,default="Honda City"}'
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text="Car number : "
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+
+                        android:text='@{model.carChasiNum,default="LED 2390"}'
+
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text="Model No: "
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text='@{model.carModel,default="2010"}'
+
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text="Chassis No:"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text='@{model.carChasiNum,default="0.434"}'
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/bg_button">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="Generate"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

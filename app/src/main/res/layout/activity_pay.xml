@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ActivityPaymentAmount">
+
+        <variable
+            name="handlers"
+            type="com.fleet.pk.PayActivity.MyClickHandlers" />
+
+        <variable
+            name="myAdapter"
+            type="com.fleet.pk.MyRecyclerViewAdapter" />
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PayActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/relavtive1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tool_bar"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Pay Amount"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:textSize="18sp"
+                android:id="@+id/tv1"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:src="@drawable/ic_baseline_chevron_left_24">
+
+            </ImageButton>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+
+                android:layout_below="@+id/tv1"
+
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+
+                android:orientation="horizontal"
+                android:background="@drawable/react03">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Self Payment"
+                    android:layout_weight="1"
+                  android:paddingEnd="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:onClick="@{handlers::showSelfUi}"
+                    android:background="@drawable/react04"
+                    android:id="@+id/tabproductTv"
+                    android:textColor="@color/black"
+                    android:gravity="center">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Static Payment"
+                    android:onClick="@{handlers::showStaticUi}"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:id="@+id/tabOrderTv"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:gravity="center">
+
+                </TextView>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/cardView"
+            android:layout_below="@+id/relavtive1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_15sdp"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_react_01"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center|center_vertical"
+                    android:background="@drawable/shape_rect02"
+                    android:orientation="horizontal">
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+
+
+                     />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:gravity="center|center_vertical"
+
+                    android:orientation="horizontal">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:textSize="@dimen/_18sdp"
+           android:text="Car information"
+           android:textColor="@color/black"
+           android:layout_height="wrap_content">
+
+       </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/colorgray01"
+                        android:layout_height="1sp">
+
+                    </View>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                  android:layout_margin="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text="Car Name: "
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text="Honda City"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text="Car number :"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text="LED 2390"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text="Model No:"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text="2010"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text="Chassis No:"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text="0.434"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/linear"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_below="@+id/relavtive1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:focusable="false"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawablePadding="@dimen/_12sdp"
+                android:drawableRight="@drawable/checked"
+                android:padding="@dimen/_5sdp"
+
+
+                android:background="@drawable/shape_react_01"
+                android:hint="Hi-Cetane Diesel Euro 5">
+
+
+            </EditText>
+
+
+            <EditText
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_12sdp"
+                android:drawableRight="@drawable/quantity"
+                android:padding="@dimen/_5sdp"
+
+                android:background="@drawable/shape_react_01"
+                android:hint="Enter litters ">
+
+
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/bg_button">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/_14sdp"
+                    android:text="GO"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_baseline_arrow"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/relavtive1"
+            android:layout_margin="@dimen/_10sdp"
+            android:id="@+id/staticPaymentRl"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:text="Vehicle QR List"
+           android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+
+                android:layout_centerHorizontal="true"
+                android:id="@+id/vList"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/green_bg"
+                android:layout_height="wrap_content">
+
+            </TextView>
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:id="@+id/staticpaymentRv"
+    android:layout_below="@+id/vList"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:adapter="@{myAdapter}"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    android:layout_height="wrap_content">
+
+</androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -4,108 +4,310 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".MainActivity">
 
 
     <RelativeLayout
+        android:id="@+id/relative1"
         android:layout_width="match_parent"
-        android:background="@drawable/ed_bg"
+        android:layout_height="@dimen/_200sdp"
         android:adjustViewBounds="true"
 
-        android:layout_height="@dimen/_220sdp">
-
-<ImageButton
-    android:layout_width="wrap_content"
-    android:src="@drawable/ic_info"
-    android:background="@null"
-    android:layout_marginStart="@dimen/_10sdp"
-    android:layout_marginTop="@dimen/_10sdp"
-    android:layout_height="wrap_content">
-
-</ImageButton>
+        android:background="@drawable/ed_bg">
 
         <ImageButton
             android:layout_width="wrap_content"
-            android:src="@drawable/ic_baseline_power"
-            android:background="@null"
-            android:layout_marginEnd="@dimen/_10sdp"
-           android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_height="wrap_content">
+            android:background="@null"
+            android:src="@drawable/ic_info">
+
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_power">
 
         </ImageButton>
 
         <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/personIV"
             android:layout_width="100dp"
-            android:layout_height="100dp"
 
+            android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            app:c_border="true"
             android:layout_marginTop="10dp"
             android:src="@drawable/personicon"
-            android:id="@+id/personIV"
             app:c_background_color="@color/white"
-            app:c_border_width="1dp"
-            >
+            app:c_border="true"
+            app:c_border_width="1dp">
 
         </com.blogspot.atifsoftwares.circularimageview.CircularImageView>
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_below="@+id/personIV"
-    android:textColor="@color/white"
-    android:textSize="@dimen/_18sdp"
-    android:id="@+id/name"
-    android:text="Rehan Munir"
-    android:textStyle="bold"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="@dimen/_10sdp"
-    android:layout_height="wrap_content">
-
-</TextView>
-
-
         <TextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
-            android:layout_below="@+id/name"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp"
-            android:id="@+id/phone"
-            android:text="+03174945474"
-            android:textStyle="bold"
-
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personIV"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:layout_height="wrap_content">
+            android:layout_margin="@dimen/_2sdp"
+            android:text="Rehan Munir"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+
+            android:textStyle="bold">
 
         </TextView>
 
 
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_2sdp"
+            android:text="+03174945474"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+
+            android:textStyle="bold">
+
+        </TextView>
+
 
     </RelativeLayout>
 
-    <androidx.cardview.widget.CardView
 
+
+
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_rowWeight="1"
+       android:id="@+id/cardView"
+        android:layout_centerHorizontal="true"
 
+        android:layout_marginTop="@dimen/_150sdp"
+
+        android:padding="@dimen/_10sdp"
         app:cardCornerRadius="10dp"
-        android:layout_marginTop="@dimen/_160sdp"
-        app:cardElevation="@dimen/_10sdp"
-        android:layout_centerHorizontal="true">
-        <com.denzcoskun.imageslider.ImageSlider
-            android:layout_width="@dimen/_250sdp"
-            android:layout_height="190dp"
-            app:iss_auto_cycle="true"
-            app:iss_delay="0"
-            app:iss_period="2500"
-            android:id="@+id/slider">
+        app:cardElevation="@dimen/_10sdp">
 
-        </com.denzcoskun.imageslider.ImageSlider>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+
+            android:padding="@dimen/_7sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Used"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_19sdp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="5000"
+                    android:textColor="@color/colororgange"
+                    android:textSize="@dimen/_16sdp">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:src="@drawable/loop_image">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Limit"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_19sdp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="10000"
+                    android:textColor="@color/colororgange"
+                    android:textSize="@dimen/_16sdp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cardView"
+
+>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_orange">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:padding="@dimen/_2sdp"
+                    android:text="Total"
+                    android:textColor="@color/colorprimary"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Available Funds"
+                    android:textColor="@color/colorprimary"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:padding="@dimen/_2sdp"
+                    android:text="8000"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:background="@drawable/input_field_decoration"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/ic_account">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Account"
+                android:textColor="@color/colororgange"
+                android:textSize="@dimen/_16sdp">
+
+            </TextView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:padding="@dimen/_10sdp">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/pay"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/ic_debit_card">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Pay"
+                android:textColor="@color/colororgange"
+                android:textSize="@dimen/_16sdp">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </RelativeLayout>

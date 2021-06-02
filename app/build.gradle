@@ -26,6 +26,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+
+        dataBinding = true
+
+        // for view binding:
+        // viewBinding = true
+    }
 }
 
 dependencies {
@@ -41,5 +48,8 @@ dependencies {
     implementation 'com.github.mohammadatif:CircularImageView:1.0.0'
     implementation 'com.github.denzcoskun:ImageSlideshow:0.0.7'
     implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.github.mudassar1:SearchableSpinner:v1.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
 }
